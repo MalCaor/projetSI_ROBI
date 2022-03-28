@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+import graphicLayer.GElement;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
 import stree.parser.SParser;
+import tools.Tools;
 
 
 public class Exercice2_1_0 {
@@ -31,13 +33,25 @@ public class Exercice2_1_0 {
 			e.printStackTrace();
 		}
 		Iterator<SNode> itor = rootNodes.iterator();
+		System.out.println(rootNodes.toString());
 		while (itor.hasNext()) {
 			this.run(itor.next());
 		}
 	}
 	
 	private void run(SNode expr) {
-		// A compléter...
+		switch (expr.get(0).contents()) {
+			case "space":
+				space.setColor(Tools.getColorByName(expr.get(2).contents()));
+				break;
+
+			case "robi":
+				robi.setColor(Tools.getColorByName(expr.get(2).contents()));
+				break;
+		
+			default:
+				break;
+		}
 	}
 
 	public static void main(String[] args) {
