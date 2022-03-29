@@ -10,6 +10,7 @@ import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
 import stree.parser.SParser;
+import tools.Tools;
 
 public class Exercice3_0 {
 	GSpace space = new GSpace("Exercice 3", new Dimension(200, 100));
@@ -58,6 +59,35 @@ public class Exercice3_0 {
 	}
 
 	Command getCommandFromExpr(SNode expr) {
+		String objet = expr.get(0).contents();
+		String commande = expr.get(1).contents();
+
+		switch(objet){
+			case "space":
+				switch(commande){
+					case "sleep":
+						return new Sleep(Integer.parseInt(expr.get(2).contents()));
+
+					case "setColor":
+						return new SpaceChangeColor(Tools.getColorByName(expr.get(2).contents()));
+					
+					default:
+						break;
+				}
+				break;
+
+			case "robi":
+				switch(commande){
+					case "sleep":
+						return new Sleep(Integer.parseInt(expr.get(2).contents()));
+					case "translate":
+						return new RobiTranslate(Integer.parseInt(expr.get(2).contents()),Integer.parseInt(expr.get(3).contents()));
+					case "setColor":
+						return new RobiChangeColor(Tools.getColorByName(expr.get(2).contents()));
+				}
+				break;
+		}
+
 		return null;
 	}
 
@@ -81,5 +111,50 @@ public class Exercice3_0 {
 			space.setColor(newColor);
 		}
 
+	}
+
+	public class RobiChangeColor implements Command {
+		Color newColor;
+
+		public RobiChangeColor(Color newColor) {
+			this.newColor = newColor;
+		}
+
+		@Override
+		public void run() {
+			robi.setColor(newColor);
+		}
+	}
+
+	public class RobiTranslate implements Command {
+		int x, y;
+
+		public RobiTranslate(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+
+		@Override
+		public void run() {
+			robi.setX(x);
+			robi.setY(y);
+		}
+	}
+
+	public class Sleep implements Command {
+		int sleepTime;
+
+		public Sleep(int sleepTime) {
+			this.sleepTime = sleepTime;
+		}
+
+		@Override
+		public void run() {
+			try {
+				Thread.sleep(sleepTime);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
