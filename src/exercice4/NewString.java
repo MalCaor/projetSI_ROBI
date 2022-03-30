@@ -3,7 +3,7 @@ package exercice4;
 import stree.parser.SNode;
 import graphicLayer.*;
 
-public class NewString {
+public class NewString implements Command{
 
     public NewString(){}
 
