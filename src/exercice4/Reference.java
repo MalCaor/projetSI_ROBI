@@ -25,4 +25,8 @@ public class Reference {
     void run(SNode method){
         
     }
+
+    public Object getReceiver() {
+        return receiver;
+    }
 }
