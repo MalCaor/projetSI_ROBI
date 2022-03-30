@@ -1,6 +1,5 @@
 package exercice4;
 
-import java.awt.Color;
 
 
 import graphicLayer.GRect;
@@ -10,30 +9,18 @@ import stree.parser.SNode;
 public interface Command {
     abstract public void run(Reference ref, SNode methode);
 
-    public class setColor implements Command {
-		Color newColor;
-
-		public setColor(Color newColor) {
-			this.newColor = newColor;
-		}
-
-		@Override
-		public void run(Reference ref, SNode methode) {
-			((GSpace) ref.receiver).setColor(newColor);
-		}
-
-	}
-
 	public class setDim implements Command {
-		Color newColor;
+		int x;
+		int y;
 
-		public setDim(Color newColor) {
-			this.newColor = newColor;
+		public setDim(int x, int y) {
+			this.x = x;
+			this.y = y;
 		}
 
 		@Override
 		public void run(Reference ref, SNode methode) {
-			((GSpace) ref.receiver).setColor(newColor);
+			((GSpace) ref.receiver).setSize(x, y);
 		}
 	}
 
