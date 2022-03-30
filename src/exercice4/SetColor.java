@@ -1,8 +1,6 @@
 package exercice4;
+
 import java.awt.Color;
-
-import javax.tools.Tool;
-
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
