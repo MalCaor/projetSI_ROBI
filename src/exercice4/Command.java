@@ -1,5 +1,71 @@
 package exercice4;
 
-public interface Command {
+import java.awt.Color;
 
+
+import graphicLayer.GRect;
+import graphicLayer.GSpace;
+import stree.parser.SNode;
+
+public interface Command {
+    abstract public void run(Reference ref, SNode methode);
+
+    public class setColor implements Command {
+		Color newColor;
+
+		public setColor(Color newColor) {
+			this.newColor = newColor;
+		}
+
+		@Override
+		public void run(Reference ref, SNode methode) {
+			((GSpace) ref.receiver).setColor(newColor);
+		}
+
+	}
+
+	public class setDim implements Command {
+		Color newColor;
+
+		public setDim(Color newColor) {
+			this.newColor = newColor;
+		}
+
+		@Override
+		public void run(Reference ref, SNode methode) {
+			((GSpace) ref.receiver).setColor(newColor);
+		}
+	}
+
+	public class translate implements Command {
+		int x, y;
+
+		public translate(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+
+		@Override
+		public void run(Reference ref, SNode methode) {
+			((GRect) ref.receiver).setX(x);
+            ((GRect) ref.receiver).setY(y);
+		}
+	}
+
+	public class Sleep implements Command {
+		int sleepTime;
+
+		public Sleep(int sleepTime) {
+			this.sleepTime = sleepTime;
+		}
+
+		@Override
+		public void run(Reference ref, SNode methode) {
+			try {
+				Thread.sleep(sleepTime);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
