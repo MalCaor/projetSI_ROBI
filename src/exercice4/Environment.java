@@ -11,7 +11,7 @@ public class Environment {
         listRef = new HashMap<String, Reference>();
     }
 
-    public void addReference(String string, Reference spaceRef) {
+    static public void addReference(String string, Reference spaceRef) {
         listRef.put(string, spaceRef);
     }
 
