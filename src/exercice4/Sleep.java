@@ -8,11 +8,12 @@ public class Sleep implements Command{
     }
 
     @Override
-    public void run(Reference ref, SNode method) {
+    public Reference run(Reference ref, SNode method) {
         try {
             Thread.sleep(Integer.parseInt(method.get(2).contents()));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        return ref;
     }
 }

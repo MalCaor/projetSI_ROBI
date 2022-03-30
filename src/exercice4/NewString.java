@@ -7,7 +7,8 @@ public class NewString implements Command{
 
     public NewString(){}
 
-    public void run(Reference ref, SNode methode){
+    public Reference run(Reference ref, SNode methode){
         ((GSpace)ref.receiver).addElement(new GString(methode.get(2).contents()));
+        return ref;
     }
 }

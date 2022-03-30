@@ -13,13 +13,14 @@ public class SetColor implements Command {
     }
 
     @Override
-    public void run(Reference ref, SNode methode) {
+    public Reference run(Reference ref, SNode methode) {
         newColor = Tools.getColorByName(methode.get(2).contents());
         try {
             ((GSpace) ref.receiver).setColor(newColor);
         } catch (Exception e) {
             ((GRect) ref.receiver).setColor(newColor);
         }
+        return ref;
     }
 
 }

@@ -8,8 +8,9 @@ public class AddElement implements Command{
     public AddElement(){}
 
     @Override
-    public void run(Reference ref, SNode methode) {
+    public Reference run(Reference ref, SNode methode) {
         ((GSpace) ref.receiver).addElement((GElement) (Environment.getReferenceByName(methode.get(2).contents())).receiver);
+        return ref;
     }
 
 }

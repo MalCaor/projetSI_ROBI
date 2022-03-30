@@ -12,7 +12,7 @@ import stree.parser.SNode;
 public class NewImage implements Command{
     public NewImage(){}
 
-    public void run(Reference ref, SNode methode){
+    public Reference run(Reference ref, SNode methode){
         BufferedImage image;
         try {
             image = ImageIO.read(new File(methode.get(2).contents()));
@@ -21,5 +21,6 @@ public class NewImage implements Command{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        return ref;
     }
 }

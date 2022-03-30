@@ -9,7 +9,8 @@ public class DelElement implements Command{
     }
 
     @Override
-    public void run(Reference ref, SNode methode) {
+    public Reference run(Reference ref, SNode methode) {
         ((GSpace) ref.receiver).removeElement((GElement) (Environment.getReferenceByName(methode.get(2).contents())).receiver);
+        return ref;
     }
 }
