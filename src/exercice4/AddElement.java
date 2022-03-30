@@ -5,8 +5,7 @@ import graphicLayer.GSpace;
 import stree.parser.SNode;
 
 public class AddElement implements Command{
-    public AddElement() {
-    }
+    public AddElement(){}
 
     @Override
     public void run(Reference ref, SNode methode) {
