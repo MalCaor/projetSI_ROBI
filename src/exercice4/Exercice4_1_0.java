@@ -19,7 +19,6 @@ package exercice4;
 
 import java.awt.Dimension;
 import java.io.IOException;
-import java.lang.ref.Reference;
 import java.util.Iterator;
 import java.util.List;
 
