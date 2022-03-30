@@ -1,7 +1,7 @@
 package exercice4;
 
  /*
-	(space setColor black)  
+	(space setColor black)(robi setColor yellow)(space sleep 2000)
 	(robi setColor yellow) 
 	(space sleep 2000) 
 	(space setColor white)  
