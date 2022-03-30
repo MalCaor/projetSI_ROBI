@@ -23,7 +23,7 @@ public class Reference {
     }
 
     void run(SNode method){
-        
+        this.primitives.get(method.get(1).contents()).run(this, method);
     }
 
     public Object getReceiver() {
