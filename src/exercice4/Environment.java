@@ -6,6 +6,11 @@ public class Environment {
 
     public HashMap<String, Reference> listRef;
 
+    // constructor
+    public Environment(){
+        listRef = new HashMap<String, Reference>();
+    }
+
     public void addReference(String string, Reference spaceRef) {
         listRef.put(string, spaceRef);
     }
