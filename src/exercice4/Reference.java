@@ -22,7 +22,7 @@ public class Reference {
         primitives.put(selector, primitive);
     }
 
-    Reference run(SNode method){
-        return null;
+    void run(SNode method){
+        
     }
 }
