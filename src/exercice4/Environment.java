@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Environment {
 
-    public HashMap<String, Reference> listRef;
+    static public HashMap<String, Reference> listRef;
 
     // constructor
     public Environment(){
@@ -15,7 +15,7 @@ public class Environment {
         listRef.put(string, spaceRef);
     }
 
-    public Reference getReferenceByName(String receiverName) {
+    static public Reference getReferenceByName(String receiverName) {
         return listRef.get(receiverName);
     }
 
