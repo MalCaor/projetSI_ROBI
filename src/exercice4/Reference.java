@@ -23,7 +23,11 @@ public class Reference {
     }
 
     void run(SNode method){
-        this.primitives.get(method.get(1).contents()).run(this, method);
+        if(method.get(1).contents() != null || method.get(1).contents() != ""){
+            this.primitives.get(method.get(1).contents()).run(this, method);
+        } else {
+            System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " n'existe pas");
+        }
     }
 
     public Object getReceiver() {
