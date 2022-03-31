@@ -9,7 +9,20 @@ public class AddElement implements Command{
 
     @Override
     public Reference run(Reference ref, SNode methode) {
-        ((GSpace) ref.receiver).addElement((GElement) (Environment.getReferenceByName(methode.get(2).contents())).receiver);
+        if(methode.get(2) == null || methode.get(2).contents() == null){
+            System.out.println("Erreur AddElement : pas de paramètre");
+        } else { 
+            if (Environment.getReferenceByName(methode.get(2).contents()) == null){
+                System.out.println("Erreur AddElement : Reference non trouvé");
+            } else {
+                GElement g = ((GElement) (Environment.getReferenceByName(methode.get(2).contents())).receiver);
+                if(g == null){
+                    System.out.println("Erreur AddElement : element is null");
+                } else{
+                    ((GSpace) ref.receiver).addElement(g);
+                }
+            }
+        }
         return ref;
     }
 
