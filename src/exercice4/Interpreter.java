@@ -11,7 +11,10 @@ public class Interpreter {
             environment.getReferenceByName(next.get(0).contents()).run(next);
         } else {
             // itération
-            compute(environment, next.get(3));
+            SNode sousCommande = next.get(3);
+            sousCommande.addChild(next.get(2));
+            compute(environment, sousCommande);
+            
             environment.getReferenceByName(next.get(0).contents()).run(next);
         }
     }
