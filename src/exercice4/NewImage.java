@@ -17,7 +17,8 @@ public class NewImage implements Command{
         try {
             image = ImageIO.read(new File(methode.get(2).contents()));
             ref.receiver = new GImage(image);
-            ref.addCommand("setColor", new SetColor());
+            ref.addCommand("translate", new Translate());
+			ref.addCommand("setDim", new SetDim());
             Environment.addReference(methode.get(methode.size()-1).contents(),ref);
         } catch (IOException e) {
             // TODO Auto-generated catch block
