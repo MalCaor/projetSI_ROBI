@@ -8,14 +8,22 @@ public class Interpreter {
         int size = next.size();
         if(size <= 3){
             // une seul instruction
-            environment.getReferenceByName(next.get(0).contents()).run(next);
+            if(environment.getReferenceByName(next.get(0).contents()) == null){
+                System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
+            } else {
+                environment.getReferenceByName(next.get(0).contents()).run(next);
+            }
         } else {
             // itération
             SNode sousCommande = next.get(3);
             sousCommande.addChild(next.get(2));
             compute(environment, sousCommande);
             
-            environment.getReferenceByName(next.get(0).contents()).run(next);
+            if(environment.getReferenceByName(next.get(0).contents()) == null){
+                System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
+            } else {
+                environment.getReferenceByName(next.get(0).contents()).run(next);
+            }
         }
     }
 
