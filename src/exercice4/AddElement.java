@@ -13,7 +13,7 @@ public class AddElement implements Command{
             System.out.println("Erreur AddElement : pas de paramètre");
         } else { 
             if (Environment.getReferenceByName(methode.get(2).contents()) == null){
-                System.out.println("Erreur AddElement : Reference non trouvé");
+                System.out.println("Erreur AddElement : Reference "+ methode.get(2) +" non trouvé");
             } else {
                 GElement g = ((GElement) (Environment.getReferenceByName(methode.get(2).contents())).receiver);
                 if(g == null){
