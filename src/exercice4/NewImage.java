@@ -16,7 +16,7 @@ public class NewImage implements Command{
         BufferedImage image;
         try {
             image = ImageIO.read(new File(methode.get(2).contents()));
-            ((GSpace)ref.receiver).addElement(new GImage(image));
+            ref.receiver = new GImage(image);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
