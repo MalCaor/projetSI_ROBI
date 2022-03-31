@@ -24,9 +24,14 @@ public class Reference {
 
     void run(SNode method){
         if(method.get(1).contents() != null || method.get(1).contents() != ""){
-            this.primitives.get(method.get(1).contents()).run(this, method);
+            if(this.primitives.get(method.get(1).contents()) != null){
+                this.primitives.get(method.get(1).contents()).run(this, method);
+            } else {
+                System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " est pas dans la Ref");
+            }
+            
         } else {
-            System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " n'existe pas");
+            System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " vide");
         }
     }
 
