@@ -6,7 +6,7 @@ public class Interpreter {
 
     public void compute(Environment environment, SNode next) {
         int size = next.size();
-        if(size == 3){
+        if(size <= 3){
             // une seul instruction
             environment.getReferenceByName(next.get(0).contents()).run(next);
         } else {
