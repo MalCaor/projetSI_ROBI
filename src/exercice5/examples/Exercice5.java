@@ -11,6 +11,7 @@ import graphicLayer.*;
 public class Exercice5 {
 
     public void oneShot(String script){
+        System.out.println("execution de one Shot");
 
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
@@ -25,6 +26,7 @@ public class Exercice5 {
         // compilation
         List<SNode> compiled = null;
         try {
+            System.out.println("execution script");
             compiled = parser.parse(script);
         } catch (IOException e) {
             // TODO Auto-generated catch block
