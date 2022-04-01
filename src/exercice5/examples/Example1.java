@@ -1,6 +1,6 @@
 package exercice5.examples;
 
-import exercice5.Exercice5;
+//import exercice5.Exercice5;
 
 public class Example1 {
 	
