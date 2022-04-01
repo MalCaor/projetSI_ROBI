@@ -3,9 +3,7 @@ package exercice5.examples;
 import java.io.IOException;
 import java.util.List;
 import java.util.Iterator;
-import exercice4.*;
 import stree.parser.*;
-import graphicLayer.*;
 
 
 public class Exercice5 {
@@ -16,10 +14,13 @@ public class Exercice5 {
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
         Environment environment = new Environment();
+
+        System.out.println("creation env");
+
         new Exercice4_2_0();
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
-
+        System.out.println("Exercice4_2_0 crée");
 
         // creation du parser
         SParser<SNode> parser = new SParser<>();
