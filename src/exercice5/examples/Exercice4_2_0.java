@@ -97,10 +97,10 @@ public class Exercice4_2_0 {
 		stringClassRef.addCommand("new", new NewString());
 
 		environment.addReference("space", spaceRef);
-		environment.addReference("rect.class", rectClassRef);
-		environment.addReference("oval.class", ovalClassRef);
-		environment.addReference("image.class", imageClassRef);
-		environment.addReference("label.class", stringClassRef);
+		environment.addReference("Rect", rectClassRef);
+		environment.addReference("Oval", ovalClassRef);
+		environment.addReference("Image", imageClassRef);
+		environment.addReference("Label", stringClassRef);
 		
 		//this.mainLoop();
 	}

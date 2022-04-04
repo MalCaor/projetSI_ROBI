@@ -17,7 +17,7 @@ class NewElement implements Command {
 			ref.addCommand("setDim", new SetDim());*/
 
 			switch (method.get(0).contents()){
-				case "rect.class":
+				case "Rect":
 					Reference refRect = new Reference(new GRect());
 
 					refRect.addCommand("setColor", new SetColor());
@@ -27,7 +27,7 @@ class NewElement implements Command {
 					Environment.addReference(method.get(method.size()-1).contents(), refRect);
 					return refRect;
 
-				case "oval.class":
+				case "Oval":
 					Reference refOval = new Reference(new GOval());
 
 					refOval.addCommand("setColor", new SetColor());
@@ -37,13 +37,13 @@ class NewElement implements Command {
 					Environment.addReference(method.get(method.size()-1).contents(), refOval);
 					return refOval;
 
-				case "image.class":
+				case "Image":
 					Reference refImage = new NewImage().run(reference, method);
 					refImage.addCommand("setColor", new SetColor());
 					Environment.addReference(method.get(method.size()-1).contents(),refImage);
 					return refImage;
 
-				case "label.class":
+				case "Label":
 					Reference refLabel = new NewString().run(reference, method);
 					refLabel.addCommand("setColor", new SetColor());
 					Environment.addReference(method.get(method.size()-1).contents(),refLabel);
