@@ -34,6 +34,7 @@ public class Exercice5 {
             e.printStackTrace();
         }
         // execution des s-expressions compilees
+        System.out.println("execution des s-expressions compilees");
         Iterator<SNode> itor = compiled.iterator();
         while (itor.hasNext()) {
             new Interpreter().compute(environment, itor.next());

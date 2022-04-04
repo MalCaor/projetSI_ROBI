@@ -17,11 +17,27 @@ public class Example1 {
 				+   "(robi translate 0 50)"
 				+   "(space sleep 1000)"
 				+   "(robi translate 100 50)";
-	
+
+	String script2 ="(space setDim 150 120)"
+				+	"(space add robi (Rect new))"
+				+	"(space.robi setColor white)"
+				+	"(space.robi setDim 100 100)"
+				+	"(space.robi translate 20 10)"
+				+	"(space.robi add im (Image new alien.gif))"
+				+	"(space.robi.im translate 20 20)";
+
+	String script3= "(space add robi (Rect new))"
+				+   "(space.robi add pif (Image new alien.gif))"
+				+   "(space.robi setColor yellow)"
+				+   "(space.robi translate 100 0)"
+				+   "(space sleep 1000)"
+				+   "(space.robi translate 0 50)"
+				+   "(space sleep 1000)"
+				+   "(space.robi translate 100 50)";
 	
 	public  void launch() {
 		Exercice5 exo = new Exercice5();
-		exo.oneShot(script);
+		exo.oneShot(script2);
 	}
 	
 	public static void main(String[] args) {

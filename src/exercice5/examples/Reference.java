@@ -38,6 +38,7 @@ public class Reference {
 
     void run(SNode method){
         if(method.get(1).contents() != null || method.get(1).contents() != ""){
+            
             if(this.primitives.get(method.get(1).contents()) != null){
                 this.primitives.get(method.get(1).contents()).run(this, method);
             } else {

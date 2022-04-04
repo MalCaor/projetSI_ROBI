@@ -20,6 +20,8 @@ public class AddElement implements Command{
                     System.out.println("Erreur AddElement : element is null");
                 } else{
                     ((GSpace) ref.receiver).addElement(g);
+                    System.out.println("ajout du fils "+methode.get(2).contents()+" a "+methode.get(0).contents());
+                    ref.addChild(methode.get(2).contents(), Environment.getReferenceByName(methode.get(2).contents()));
                 }
             }
         }
