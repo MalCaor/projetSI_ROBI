@@ -84,6 +84,7 @@ public class Exercice4_2_0 {
 		Reference ovalClassRef = new Reference(GOval.class);
 		Reference imageClassRef = new Reference(GImage.class);
 		Reference stringClassRef = new Reference(GString.class);
+		Reference scriptClassRef = new Reference(null);
 
 		spaceRef.addCommand("setColor", new SetColor());
 		spaceRef.addCommand("sleep", new Sleep());
@@ -101,6 +102,7 @@ public class Exercice4_2_0 {
 		environment.addReference("Oval", ovalClassRef);
 		environment.addReference("Image", imageClassRef);
 		environment.addReference("Label", stringClassRef);
+		environment.addReference("script", scriptClassRef);
 		
 		//this.mainLoop();
 	}

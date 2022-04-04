@@ -48,6 +48,12 @@ class NewElement implements Command {
 					refLabel.addCommand("setColor", new SetColor());
 					Environment.addReference(method.get(method.size()-1).contents(),refLabel);
 					return refLabel;
+
+				case "script":
+					System.out.println("Creation Script");
+					Reference refScript = new Reference(null);
+					Environment.addReference(method.get(method.size()-1).contents(),refScript);
+					return refScript;
 			}
 
 			//return null;
