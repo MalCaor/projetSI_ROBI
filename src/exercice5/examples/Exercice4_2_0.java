@@ -97,6 +97,12 @@ public class Exercice4_2_0 {
 		imageClassRef.addCommand("new", new NewImage());
 		stringClassRef.addCommand("new", new NewString());
 
+		// add children
+		rectClassRef.addCommand("add", new AddChild());
+		ovalClassRef.addCommand("add", new AddChild());
+		imageClassRef.addCommand("add", new AddChild());
+		stringClassRef.addCommand("add", new AddChild());
+
 		environment.addReference("space", spaceRef);
 		environment.addReference("Rect", rectClassRef);
 		environment.addReference("Oval", ovalClassRef);

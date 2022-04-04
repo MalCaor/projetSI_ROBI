@@ -15,6 +15,7 @@ public class Interpreter {
             if(environment.getReferenceByName(next.get(0).contents()) == null){
                 System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
             } else {
+                System.out.println("Reference : " + next.get(0).contents());
                 environment.getReferenceByName(next.get(0).contents()).run(next);
             }
         }else{
