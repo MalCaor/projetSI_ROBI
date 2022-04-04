@@ -41,7 +41,7 @@ public class Reference {
             if(this.primitives.get(method.get(1).contents()) != null){
                 this.primitives.get(method.get(1).contents()).run(this, method);
             } else {
-                System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " est pas dans la Ref");
+                System.out.println("Erreur Reference : Methode " + method.get(1).contents() + " est pas dans la Ref " + method.get(0).contents());
             }
             
         } else {
