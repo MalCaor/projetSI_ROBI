@@ -10,7 +10,7 @@ public class Example1 {
 	 * 
 	 */
 	String script = "(space add robi (Rect new))"
-				+   "(robi add pif (image.class new alien.gif))"
+				+   "(robi add pif (Image new alien.gif))"
 				+   "(robi setColor yellow)"
 				+   "(robi translate 100 0)"
 				+   "(space sleep 1000)"
