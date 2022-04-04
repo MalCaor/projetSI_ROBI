@@ -9,7 +9,13 @@ public class Example1 {
 	 * On doit voir un rectangle bleu en (0,0)
 	 * 
 	 */
-	String script = "(space add robi (Rect new)) (space setColor black) (robi setColor yellow)";
+	String script = "(space add robi (Rect new))"
+				+   "(robi setColor yellow)"
+				+   "(robi translate 100 0)"
+				+   "(space sleep 1000)"
+				+   "(robi translate 0 50)"
+				+   "(space sleep 1000)"
+				+   "(robi translate 100 50)";
 	
 	
 	public  void launch() {
