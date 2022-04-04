@@ -8,10 +8,14 @@ public class Reference {
 
     Object receiver;
     Map<String, Command> primitives;
+
+    // list children
+    Map<String, Reference> listChildren;
     
     public Reference(Object receiver) {
         this.receiver = receiver;
         primitives = new HashMap<String, Command>();
+        listChildren = new HashMap<String, Reference>();
     }
 
     Command getCommandByName(String selector){
@@ -20,6 +24,16 @@ public class Reference {
 
     void addCommand(String selector, Command primitive){
         primitives.put(selector, primitive);
+    }
+
+    // children
+
+    void addChild(String childName, Reference ref){
+        listChildren.put(childName, ref);
+    }
+
+    Reference getChild(String name){
+        return listChildren.get(name);
     }
 
     void run(SNode method){
