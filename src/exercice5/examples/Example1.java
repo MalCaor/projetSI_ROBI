@@ -18,7 +18,7 @@ public class Example1 {
 				+   "(space sleep 1000)"
 				+   "(robi translate 100 50)";
 
-	String script2 ="(space setDim 150 120)"
+	String script2 ="(space setDim 200 200)"
 				+	"(space add robi (Rect new))"
 				+	"(space.robi setColor white)"
 				+   "(space sleep 1000)"

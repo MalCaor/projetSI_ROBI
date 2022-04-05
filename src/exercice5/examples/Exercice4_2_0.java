@@ -64,6 +64,7 @@ public class Exercice4_2_0 {
 
 		spaceRef.addCommand("add", new AddElement());
 		spaceRef.addCommand("del", new DelElement());
+		spaceRef.addCommand("setDim", new SetDim());
 		
 		rectClassRef.addCommand("new", new NewElement());
 		ovalClassRef.addCommand("new", new NewElement());
