@@ -21,8 +21,10 @@ public class Example1 {
 	String script2 ="(space setDim 150 120)"
 				+	"(space add robi (Rect new))"
 				+	"(space.robi setColor white)"
+				+   "(space sleep 1000)"
 				+	"(space.robi setDim 100 100)"
 				+	"(space.robi translate 20 10)"
+				+   "(space sleep 1000)"
 				+	"(space.robi add im (Image new alien.gif))"
 				+	"(space.robi.im translate 20 20)";
 
