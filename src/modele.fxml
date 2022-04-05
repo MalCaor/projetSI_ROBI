@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="client_robi.Control">
+    <top>
+        <MenuBar>
+            <Menu text="Fichier">
+                <MenuItem text="Ouvrir" onAction="#openFile"/>
+                <MenuItem text="Sauver" onAction="#saveFile"/>
+                <MenuItem text="Fermer"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+ 		<GridPane alignment="center" hgap="10" vgap="10"
+    	styleClass="root">
+    	<padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+ 	       <AnchorPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+	            <TextArea fx:id="textArea1" prefHeight="200.0" prefWidth="600.0" text="Programme ROBI"
+	                      AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+	                      AnchorPane.topAnchor="5.0"/>
+	        </AnchorPane>
+     
+	        <AnchorPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+	            <TextArea fx:id="textArea2" prefHeight="200.0" prefWidth="600.0" text="Trace d'éxécution"
+	                      AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+	                      AnchorPane.topAnchor="5.0"/>
+	        </AnchorPane>
+	        
+	        <AnchorPane GridPane.columnIndex="0" GridPane.rowIndex="2" >
+  				<children>
+   					<Button fx:id="b1" onAction="#b1_exec" layoutX="14.0" layoutY="14.0" text="Exécuter programme ROBI" />
+   				</children>
+			</AnchorPane>
+	        
+        </GridPane>
+    </center>
+</BorderPane>
