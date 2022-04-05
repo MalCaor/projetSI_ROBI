@@ -5,46 +5,56 @@ import stree.parser.SNode;
 public class Interpreter {
 
     public void compute(Environment environment, SNode next) {
+        
         int size = next.size();
-
         Reference r = null;
-
-        //System.out.println(next.get(0).contents());
         String[] args = next.get(0).contents().split("\\.");
-        /*for(String a : args){
-            System.out.println(a);
-        }
-        System.out.println("oui");*/
 
-        if(args.length > 1) {
+        
+        if(size > 3 && next.get(3).hasChildren()) {
+            // recursif
 
-            for(int i=0;i<args.length-1;i++) {
-                r = environment.getReferenceByName(args[i]).getChild(args[i+1]);
+            SNode sousCommande = next.get(3); //on recupere la sous Commande
+            sousCommande.addChild(next.get(2)); //on ajoute en dernier paramètre le nom de l'objet
+            compute(environment, sousCommande); // on execute la sous commande
+            
+            if(args.length > 1) {
+                //On verifie si les objets appartiennent bien aux autres objets
+                //ex: space.robi.im -> on verifie que space a bien un robi, et que robi a bien un im
+                for(int i=0;i<args.length-1;i++) {
+                    r = environment.getReferenceByName(args[i]).getChild(args[i+1]);
+                }
+            }else{
+                r = environment.getReferenceByName(next.get(0).contents());
+            }
+
+            if(r==null){
+                System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
+            }else{
+                r.run(next);
             }
             
         }else{
-            r = environment.getReferenceByName(next.get(0).contents());
-        }
-        
-        if(r==null){
-            System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
-        }else{
+            // une seul instruction
 
-            if(size > 3 && next.get(3).hasChildren()) {
-                // recursif
-                SNode sousCommande = next.get(3);
-                sousCommande.addChild(next.get(2));
-                compute(environment, sousCommande);
-                
-                r.run(next);
-                //System.out.println("Reference : " + next.get(0).contents());
-                //environment.getReferenceByName(next.get(0).contents()).run(next);
+            if(args.length > 1) {
+                //On verifie si les objets appartiennent bien aux autres objets
+                //ex: space.robi.im -> on verifie que space a bien un robi, et que robi a bien un im
+                for(int i=0;i<args.length-1;i++) {
+                    r = environment.getReferenceByName(args[i]).getChild(args[i+1]);
+                }
             }else{
-                // une seul instruction
-                r.run(next);
+                r = environment.getReferenceByName(next.get(0).contents());
             }
 
+            if(r==null){
+                System.out.println("Erreur Interpreter : Reference " + next.get(0).contents() + " n'existe pas");
+            }else{
+                r.run(next);
+            }
         }
+
+        
 
          
     }

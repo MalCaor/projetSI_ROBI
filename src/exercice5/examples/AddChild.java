@@ -13,7 +13,9 @@ public class AddChild implements Command {
             if (Environment.getReferenceByName(methode.get(2).contents()) == null){
                 System.out.println("Erreur AddElement : Reference "+ methode.get(2).contents() +" non trouvé");
             } else {
-                Environment.getReferenceByName(methode.get(2).contents()).addChild(methode.get(2).contents(), Environment.getReferenceByName(methode.get(2).contents()));
+                String[] args = methode.get(0).contents().split("\\.");
+                System.out.println("ajout du fils "+methode.get(2).contents()+" a "+args[args.length-1]);
+                Environment.getReferenceByName(args[args.length-1]).addChild(methode.get(2).contents(), Environment.getReferenceByName(methode.get(2).contents()));
             }
         }
         return ref;
