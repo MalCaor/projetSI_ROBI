@@ -35,7 +35,6 @@ package exercice5.examples;
 
 */
 
-
 import java.awt.Dimension;
 import graphicLayer.GImage;
 import graphicLayer.GOval;
