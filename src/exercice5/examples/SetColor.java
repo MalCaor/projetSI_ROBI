@@ -3,8 +3,6 @@ package exercice5.examples;
 import java.awt.Color;
 
 import graphicLayer.GElement;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import stree.parser.SNode;
 import tools.Tools;
 

@@ -1,6 +1,6 @@
 package exercice5.examples;
 
-import graphicLayer.GSpace;
+import graphicLayer.*;
 import stree.parser.SNode;
 
 public class SetDim implements Command{
@@ -11,6 +11,8 @@ public class SetDim implements Command{
             ((GSpace)ref.receiver).setSize(Integer.parseInt(methode.get(2).contents()), Integer.parseInt(methode.get(3).contents()));
         } catch (Exception e) {
             //TODO: handle exception
+            ((GBounded) ref.receiver).setHeight(Integer.parseInt(methode.get(2).contents()));
+            ((GBounded) ref.receiver).setWidth(Integer.parseInt(methode.get(3).contents()));
         }
 
         return ref;

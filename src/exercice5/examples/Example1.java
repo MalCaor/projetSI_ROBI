@@ -37,7 +37,7 @@ public class Example1 {
 	
 	public  void launch() {
 		Exercice5 exo = new Exercice5();
-		exo.oneShot(script3);
+		exo.oneShot(script2);
 	}
 	
 	public static void main(String[] args) {

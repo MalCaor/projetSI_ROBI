@@ -37,39 +37,13 @@ package exercice5.examples;
 
 
 import java.awt.Dimension;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
-
 import graphicLayer.GImage;
 import graphicLayer.GOval;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import graphicLayer.GString;
-import stree.parser.SNode;
-import stree.parser.SParser;
-import tools.Tools;
 
 
-/*
-class NewElement implements Command {
-	public Reference run(Reference reference, SNode method) {
-		try {
-			@SuppressWarnings("unchecked")
-			GElement e = ((Class<GElement>) reference.getReceiver()).getDeclaredConstructor().newInstance();
-			Reference ref = new Reference(e);
-			ref.addCommand("setColor", new SetColor());
-			ref.addCommand("translate", new Translate());
-			ref.addCommand("setDim", new SetDim());
-			return ref;
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
-				| NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-}
-*/
 
 public class Exercice4_2_0 {
 	// Une seule variable d'instance
@@ -98,10 +72,14 @@ public class Exercice4_2_0 {
 		stringClassRef.addCommand("new", new NewString());
 
 		// add children
-		rectClassRef.addCommand("add", new AddChild());
-		ovalClassRef.addCommand("add", new AddChild());
-		imageClassRef.addCommand("add", new AddChild());
-		stringClassRef.addCommand("add", new AddChild());
+		rectClassRef.addCommand("addChild", new AddChild());
+		ovalClassRef.addCommand("addChild", new AddChild());
+		imageClassRef.addCommand("addChild", new AddChild());
+		stringClassRef.addCommand("addChild", new AddChild());
+
+		// add element
+		rectClassRef.addCommand("add", new AddElement());
+		ovalClassRef.addCommand("add", new AddElement());
 
 		environment.addReference("space", spaceRef);
 		environment.addReference("Rect", rectClassRef);
@@ -110,32 +88,9 @@ public class Exercice4_2_0 {
 		environment.addReference("Label", stringClassRef);
 		environment.addReference("script", scriptClassRef);
 		
-		//this.mainLoop();
 	}
 	
-	private void mainLoop() {
-		while (true) {
-			// prompt
-			System.out.print("> ");
-			// lecture d'une serie de s-expressions au clavier (return = fin de la serie)
-			String input = Tools.readKeyboard();
-			// creation du parser
-			SParser<SNode> parser = new SParser<>();
-			// compilation
-			List<SNode> compiled = null;
-			try {
-				compiled = parser.parse(input);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			// execution des s-expressions compilees
-			Iterator<SNode> itor = compiled.iterator();
-			while (itor.hasNext()) {
-				new Interpreter().compute(environment, itor.next());
-			}
-		}
-	}
+	
 
 	public static void main(String[] args) {
 		new Exercice4_2_0();
