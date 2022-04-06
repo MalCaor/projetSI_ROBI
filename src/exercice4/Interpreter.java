@@ -7,7 +7,9 @@ public class Interpreter {
     public void compute(Environment environment, SNode next) {
         int size = next.size();
         if(size > 3 && next.get(3).hasChildren()) {
-            // itération
+            // itération 
+            // s'il y a une sous commande (ex: (GRect new) dans (space add robi (GRect new))) on l'isole et on l'execute en premier.
+            // on effectue cette verification a chaque fois
             SNode sousCommande = next.get(3);
             sousCommande.addChild(next.get(2));
             compute(environment, sousCommande);

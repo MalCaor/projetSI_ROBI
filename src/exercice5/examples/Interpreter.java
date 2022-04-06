@@ -13,6 +13,8 @@ public class Interpreter {
         
         if(size > 3 && next.get(3).hasChildren()) {
             // recursif
+            // s'il y a une sous commande (ex: (GRect new) dans (space add robi (GRect new))) on l'isole et on l'execute en premier.
+            // on effectue cette verification a chaque fois
 
             SNode sousCommande = next.get(3); //on recupere la sous Commande
             sousCommande.addChild(next.get(2)); //on ajoute en dernier paramètre le nom de l'objet
