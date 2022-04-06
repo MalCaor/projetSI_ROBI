@@ -99,6 +99,7 @@ public class Exercice3_0 {
 		abstract public void run();
 	}
 
+	//change la couleur du space
 	public class SpaceChangeColor implements Command {
 		Color newColor;
 
@@ -113,6 +114,7 @@ public class Exercice3_0 {
 
 	}
 
+	//change la couleur du Robi
 	public class RobiChangeColor implements Command {
 		Color newColor;
 
@@ -126,6 +128,7 @@ public class Exercice3_0 {
 		}
 	}
 
+	//deplace le Robi
 	public class RobiTranslate implements Command {
 		int x, y;
 
@@ -141,6 +144,7 @@ public class Exercice3_0 {
 		}
 	}
 
+	//fait attendre le Thread
 	public class Sleep implements Command {
 		int sleepTime;
 

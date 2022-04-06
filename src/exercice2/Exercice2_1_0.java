@@ -4,8 +4,6 @@ import java.awt.Dimension;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-
-import graphicLayer.GElement;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
@@ -34,6 +32,8 @@ public class Exercice2_1_0 {
 		}
 		Iterator<SNode> itor = rootNodes.iterator();
 		System.out.println(rootNodes.toString());
+		
+		//execution de chaque instruction dans script
 		while (itor.hasNext()) {
 			this.run(itor.next());
 		}

@@ -2,12 +2,10 @@ package exercice1;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
 import java.util.Random;
-
-import graphicLayer.GElement;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
+
 
 public class Exercice1_0 {
 	GSpace space = new GSpace("Exercice 1", new Dimension(200, 150));
@@ -25,7 +23,8 @@ public class Exercice1_0 {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			
+
+			//le robi fait le tour du space, et change de couleur à chaque tour
 			if(!retour)
 			{
 				if(robi.getX() < (space.getWidth()-20)){
