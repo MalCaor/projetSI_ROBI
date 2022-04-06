@@ -18,6 +18,7 @@ class NewElement implements Command {
 				refRect.addCommand("setDim", new SetDim());
 				refRect.addCommand("addChild", new AddChild());
 				refRect.addCommand("add", new AddElement());
+				refRect.addCommand("del", new DelElement());
 
 				Environment.addReference(method.get(method.size()-1).contents(), refRect);
 				return refRect;
@@ -30,6 +31,7 @@ class NewElement implements Command {
 				refOval.addCommand("setDim", new SetDim());
 				refOval.addCommand("addChild", new AddChild());
 				refOval.addCommand("add", new AddElement());
+				refOval.addCommand("del", new DelElement());
 
 				Environment.addReference(method.get(method.size()-1).contents(), refOval);
 				return refOval;
