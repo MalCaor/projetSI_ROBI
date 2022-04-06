@@ -1,7 +1,7 @@
-package exercice4;
+package projetsi.exercice4;
 
-import graphicLayer.GSpace;
-import stree.parser.SNode;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
 
 public class SetDim implements Command{
     public SetDim(){}

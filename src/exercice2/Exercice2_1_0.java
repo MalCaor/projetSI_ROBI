@@ -1,4 +1,4 @@
-package exercice2;
+package projetsi.exercice2;
 
 import java.awt.Dimension;
 import java.io.IOException;

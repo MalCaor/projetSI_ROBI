@@ -1,4 +1,4 @@
-package exercice4;
+package projetsi.exercice4;
 
 import java.util.HashMap;
 

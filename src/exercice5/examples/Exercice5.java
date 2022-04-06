@@ -1,9 +1,9 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Iterator;
-import stree.parser.*;
+import projetsi.stree.parser.*;
 
 
 public class Exercice5 {

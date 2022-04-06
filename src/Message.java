@@ -1,3 +1,5 @@
+package projetsi;
+
 
 // Utilisation de la classe Message :
 // Message m = new Message("type","val");

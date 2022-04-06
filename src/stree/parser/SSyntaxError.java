@@ -1,4 +1,4 @@
-package stree.parser;
+package projetsi.stree.parser;
 
 public class SSyntaxError extends Error {
 	private static final long serialVersionUID = -6580502390570165179L;

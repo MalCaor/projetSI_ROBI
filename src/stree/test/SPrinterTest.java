@@ -1,4 +1,4 @@
-package stree.test;
+package projetsi.stree.test;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,8 +1,8 @@
-package exercice4;
+package projetsi.exercice4;
 
-import graphicLayer.GElement;
-import graphicLayer.GSpace;
-import stree.parser.SNode;
+import projetsi.graphicLayer.GElement;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
 
 public class AddElement implements Command{
     public AddElement(){}

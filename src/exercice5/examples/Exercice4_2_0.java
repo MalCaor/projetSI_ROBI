@@ -1,4 +1,4 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
  /*
 	(space setColor black)(robi setColor yellow)(space sleep 2000)
@@ -36,11 +36,11 @@ package exercice5.examples;
 */
 
 import java.awt.Dimension;
-import graphicLayer.GImage;
-import graphicLayer.GOval;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
-import graphicLayer.GString;
+import projetsi.graphicLayer.GImage;
+import projetsi.graphicLayer.GOval;
+import projetsi.graphicLayer.GRect;
+import projetsi.graphicLayer.GSpace;
+import projetsi.graphicLayer.GString;
 
 
 

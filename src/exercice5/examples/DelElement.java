@@ -1,8 +1,8 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
-import graphicLayer.GElement;
-import graphicLayer.GSpace;
-import stree.parser.SNode;
+import projetsi.graphicLayer.GElement;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
 
 public class DelElement implements Command{
     public DelElement() {

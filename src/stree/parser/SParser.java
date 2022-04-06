@@ -1,4 +1,4 @@
-package stree.parser;
+package projetsi.stree.parser;
 
 import java.io.IOException;
 import java.io.Reader;

@@ -1,4 +1,4 @@
-package graphicLayer;
+package projetsi.graphicLayer;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

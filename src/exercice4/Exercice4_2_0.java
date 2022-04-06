@@ -1,4 +1,4 @@
-package exercice4;
+package projetsi.exercice4;
 
  /*
 	(space setColor black)(robi setColor yellow)(space sleep 2000)
@@ -41,14 +41,14 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-import graphicLayer.GImage;
-import graphicLayer.GOval;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
-import graphicLayer.GString;
-import stree.parser.SNode;
-import stree.parser.SParser;
-import tools.Tools;
+import projetsi.graphicLayer.GImage;
+import projetsi.graphicLayer.GOval;
+import projetsi.graphicLayer.GRect;
+import projetsi.graphicLayer.GSpace;
+import projetsi.graphicLayer.GString;
+import projetsi.stree.parser.SNode;
+import projetsi.stree.parser.SParser;
+import projetsi.tools.Tools;
 
 
 /*

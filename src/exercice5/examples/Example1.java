@@ -1,4 +1,4 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
 //import exercice5.Exercice5;
 

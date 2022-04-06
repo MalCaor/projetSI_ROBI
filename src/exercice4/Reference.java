@@ -1,8 +1,8 @@
-package exercice4;
+package projetsi.exercice4;
 
 import java.util.HashMap;
 import java.util.Map;
-import stree.parser.SNode;
+import projetsi.stree.parser.SNode;
 
 public class Reference {
 

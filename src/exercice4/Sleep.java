@@ -1,6 +1,6 @@
-package exercice4;
+package projetsi.exercice4;
 
-import stree.parser.SNode;
+import projetsi.stree.parser.SNode;
 
 public class Sleep implements Command{
 

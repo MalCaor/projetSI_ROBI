@@ -1,7 +1,7 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
-import stree.parser.SNode;
-import graphicLayer.*;
+import projetsi.stree.parser.SNode;
+import projetsi.graphicLayer.*;
 
 public class NewString implements Command{
 

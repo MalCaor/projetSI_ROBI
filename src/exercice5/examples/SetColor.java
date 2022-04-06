@@ -1,10 +1,10 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
 import java.awt.Color;
 
-import graphicLayer.GElement;
-import stree.parser.SNode;
-import tools.Tools;
+import projetsi.graphicLayer.GElement;
+import projetsi.stree.parser.SNode;
+import projetsi.tools.Tools;
 
 public class SetColor implements Command {
     Color newColor;

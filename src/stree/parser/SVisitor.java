@@ -1,4 +1,4 @@
-package stree.parser;
+package projetsi.stree.parser;
 
 public interface SVisitor {
 	public void visitNode(SNode node);

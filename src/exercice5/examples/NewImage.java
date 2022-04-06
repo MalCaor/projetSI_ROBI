@@ -1,4 +1,4 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -6,8 +6,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import graphicLayer.*;
-import stree.parser.SNode;
+import projetsi.graphicLayer.*;
+import projetsi.stree.parser.SNode;
 
 public class NewImage implements Command{
     public NewImage(){}

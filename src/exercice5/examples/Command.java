@@ -1,6 +1,6 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
-import stree.parser.SNode;
+import projetsi.stree.parser.SNode;
 
 public interface Command {
     abstract public Reference run(Reference ref, SNode methode);

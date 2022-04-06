@@ -1,10 +1,10 @@
-package exercice4;
+package projetsi.exercice4;
 
-import stree.parser.SNode;
+import projetsi.stree.parser.SNode;
 
 import java.lang.reflect.InvocationTargetException;
 
-import graphicLayer.*;
+import projetsi.graphicLayer.*;
 
 class NewElement implements Command {
 	public Reference run(Reference reference, SNode method) {

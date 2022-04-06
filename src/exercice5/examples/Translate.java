@@ -1,9 +1,9 @@
-package exercice5.examples;
+package projetsi.exercice5.examples;
 
 import java.awt.Point;
 
-import graphicLayer.*;
-import stree.parser.SNode;
+import projetsi.graphicLayer.*;
+import projetsi.stree.parser.SNode;
 
 public class Translate implements Command{
     public Translate(){}

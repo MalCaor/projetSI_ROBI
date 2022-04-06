@@ -1,4 +1,4 @@
-package graphicLayer;
+package projetsi.graphicLayer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

@@ -1,4 +1,4 @@
-package exercice1;
+package projetsi.exercice1;
 
 import java.awt.Color;
 import java.awt.Dimension;

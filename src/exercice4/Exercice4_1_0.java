@@ -1,4 +1,4 @@
-package exercice4;
+package projetsi.exercice4;
 
 // 
 //	(space setColor black)  
@@ -22,11 +22,11 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
-import stree.parser.SNode;
-import stree.parser.SParser;
-import tools.Tools;
+import projetsi.graphicLayer.GRect;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
+import projetsi.stree.parser.SParser;
+import projetsi.tools.Tools;
 
 public class Exercice4_1_0 {
 	// Une seule variable d'instance

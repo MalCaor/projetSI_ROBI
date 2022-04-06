@@ -1,4 +1,4 @@
-package stree.test;
+package projetsi.stree.test;
 
 import java.io.File;
 import java.io.FileReader;

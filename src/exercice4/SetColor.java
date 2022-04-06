@@ -1,12 +1,12 @@
-package exercice4;
+package projetsi.exercice4;
 
 import java.awt.Color;
 
-import graphicLayer.GElement;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
-import stree.parser.SNode;
-import tools.Tools;
+import projetsi.graphicLayer.GElement;
+import projetsi.graphicLayer.GRect;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
+import projetsi.tools.Tools;
 
 public class SetColor implements Command {
     Color newColor;

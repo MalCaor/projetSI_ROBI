@@ -1,3 +1,5 @@
+package projetsi;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.io.BufferedReader;
@@ -11,17 +13,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-import exercice3.Exercice3_0;
-import exercice3.Exercice3_0.Command;
-import exercice3.Exercice3_0.RobiChangeColor;
-import exercice3.Exercice3_0.RobiTranslate;
-import exercice3.Exercice3_0.Sleep;
-import exercice3.Exercice3_0.SpaceChangeColor;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
-import stree.parser.SNode;
-import stree.parser.SParser;
-import tools.Tools;
+import projetsi.exercice3.Exercice3_0;
+import projetsi.exercice3.Exercice3_0.Command;
+import projetsi.exercice3.Exercice3_0.RobiChangeColor;
+import projetsi.exercice3.Exercice3_0.RobiTranslate;
+import projetsi.exercice3.Exercice3_0.Sleep;
+import projetsi.exercice3.Exercice3_0.SpaceChangeColor;
+import projetsi.graphicLayer.GRect;
+import projetsi.graphicLayer.GSpace;
+import projetsi.stree.parser.SNode;
+import projetsi.stree.parser.SParser;
+import projetsi.tools.Tools;
 
 public class ServeurRobi {
 	static GSpace space = new GSpace("ROBIC", new Dimension(200, 100));
