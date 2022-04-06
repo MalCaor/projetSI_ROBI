@@ -3,6 +3,7 @@ package exercice4;
 import stree.parser.SNode;
 import graphicLayer.*;
 
+//Creation d'un Label
 public class NewString implements Command{
 
     public NewString(){}

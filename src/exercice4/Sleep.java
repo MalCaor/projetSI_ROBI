@@ -2,6 +2,7 @@ package exercice4;
 
 import stree.parser.SNode;
 
+// fait attendre le Thread
 public class Sleep implements Command{
 
     public Sleep() {

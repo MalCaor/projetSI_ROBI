@@ -3,11 +3,10 @@ package exercice4;
 import java.awt.Color;
 
 import graphicLayer.GElement;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import stree.parser.SNode;
 import tools.Tools;
 
+//change la couleur d'un element
 public class SetColor implements Command {
     Color newColor;
 

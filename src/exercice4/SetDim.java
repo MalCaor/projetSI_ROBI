@@ -3,6 +3,8 @@ package exercice4;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
 
+
+//Change les dimensions d'un GSpace
 public class SetDim implements Command{
     public SetDim(){}
 

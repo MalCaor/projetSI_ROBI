@@ -4,6 +4,7 @@ import graphicLayer.GElement;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
 
+//suppression d'un element d'un GSpace
 public class DelElement implements Command{
     public DelElement() {
     }
