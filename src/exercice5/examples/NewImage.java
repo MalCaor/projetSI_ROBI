@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 import graphicLayer.*;
 import stree.parser.SNode;
 
+//creation d'une image
 public class NewImage implements Command{
     public NewImage(){}
 

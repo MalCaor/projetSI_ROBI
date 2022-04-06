@@ -4,6 +4,7 @@ import graphicLayer.GElement;
 import graphicLayer.*;
 import stree.parser.SNode;
 
+//ajout d'un element a un GSpace ou un GBounded
 public class AddElement implements Command{
     public AddElement(){}
 
@@ -22,12 +23,13 @@ public class AddElement implements Command{
 
 
                     try {
+                        //on tente de caster la reference en GSpace
                         ((GSpace) ref.receiver).addElement(g);
                         System.out.println("ajout du fils "+methode.get(2).contents()+" a "+methode.get(0).contents());
                         ref.addChild(methode.get(2).contents(), Environment.getReferenceByName(methode.get(2).contents()));
                         
                     } catch (Exception e) {
-                        //TODO: handle exception
+                        //Si ça échoue, on le cast en GBounded
                         ((GBounded) ref.receiver).addElement(g);
                         System.out.println("ajout du fils "+methode.get(2).contents()+" a "+methode.get(0).contents());
                         ref.addChild(methode.get(2).contents(), Environment.getReferenceByName(methode.get(2).contents()));

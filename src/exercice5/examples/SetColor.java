@@ -6,6 +6,8 @@ import graphicLayer.GElement;
 import stree.parser.SNode;
 import tools.Tools;
 
+
+//change la couleur d'un GElement
 public class SetColor implements Command {
     Color newColor;
 

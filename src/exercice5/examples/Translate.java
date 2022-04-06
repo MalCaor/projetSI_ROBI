@@ -5,6 +5,7 @@ import java.awt.Point;
 import graphicLayer.*;
 import stree.parser.SNode;
 
+//deplace un GElement
 public class Translate implements Command{
     public Translate(){}
 

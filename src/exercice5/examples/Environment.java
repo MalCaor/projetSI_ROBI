@@ -11,10 +11,12 @@ public class Environment {
         listRef = new HashMap<String, Reference>();
     }
 
+    //ajout d'une reference a l'environnement
     static public void addReference(String string, Reference spaceRef) {
         listRef.put(string, spaceRef);
     }
 
+    //retourne une reference via son nom
     static public Reference getReferenceByName(String receiverName) {
         return listRef.get(receiverName);
     }

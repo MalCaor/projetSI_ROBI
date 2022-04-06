@@ -4,8 +4,7 @@ import stree.parser.SNode;
 
 public class Sleep implements Command{
 
-    public Sleep() {
-    }
+    public Sleep(){}
 
     @Override
     public Reference run(Reference ref, SNode method) {

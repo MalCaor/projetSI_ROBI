@@ -2,6 +2,7 @@ package exercice5.examples;
 
 import stree.parser.SNode;
 
+//ajout d'un enfant a une reference
 public class AddChild implements Command {
     public AddChild(){}
 

@@ -3,6 +3,8 @@ package exercice5.examples;
 import stree.parser.SNode;
 import graphicLayer.*;
 
+
+//creation d'un Label puis ajout de celui-ci a la liste de l'environnement
 public class NewString implements Command{
 
     public NewString(){}

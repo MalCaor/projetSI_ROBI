@@ -36,6 +36,7 @@ public class Reference {
         return listChildren.get(name);
     }
 
+    //execution de la commande sur le receiver
     void run(SNode method){
         if(method.get(1).contents() != null || method.get(1).contents() != ""){
             

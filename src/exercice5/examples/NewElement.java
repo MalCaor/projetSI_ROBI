@@ -3,10 +3,12 @@ package exercice5.examples;
 import stree.parser.SNode;
 import graphicLayer.*;
 
-
+//Creation d'un nouvel Element
 class NewElement implements Command {
 	public Reference run(Reference reference, SNode method) {
 		
+		//creation de la reference, ajout des commandes auquelscette reference a acces
+		//puis ajout de la reference a la liste des references de l'environnement
 		switch (method.get(0).contents()){
 			case "Rect":
 				Reference refRect = new Reference(new GRect());
