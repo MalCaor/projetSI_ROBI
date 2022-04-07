@@ -3,6 +3,7 @@ package exercice5.examples;
 import java.awt.Color;
 
 import graphicLayer.GElement;
+import graphicLayer.GSpace;
 import stree.parser.SNode;
 import tools.Tools;
 
@@ -20,7 +21,11 @@ public class SetColor implements Command {
         try {
             ((GElement) ref.receiver).setColor(newColor);
         } catch (Exception e) {
-            System.out.println("can't change color");
+            try {
+                ((GSpace) ref.receiver).setColor(newColor);
+            } catch (Exception e2) {
+                System.out.println("can't change color");
+            }
         }
         return ref;
     }
