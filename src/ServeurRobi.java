@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.Dimension;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,13 +7,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Iterator;
 import java.util.List;
-
-import exercice3.Exercice3_0;
+import exercice5.examples.*;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
 import stree.parser.SNode;
 import stree.parser.SParser;
-import tools.Tools;
 
 public class ServeurRobi {
 	static GSpace space = new GSpace("ROBIC", new Dimension(200, 100));
@@ -23,56 +20,66 @@ public class ServeurRobi {
     public static void main(String[] args) throws Exception {
         new ServeurRobi();
     }
-	public ServeurRobi() throws Exception{
-		int indic=0;
-		Exercice3_0 commandeInter=new Exercice3_0();
-		
+    
+	public ServeurRobi() throws Exception{		
 		////////////////PASSAGE PARTIE RECEVOIR MESSAGE///////     
-		ServerSocket serv=new ServerSocket(8000,1);
+		ServerSocket serv=new ServerSocket(8000,1);// On crée un serveur socket avec pour backlog la valeur minimale 
+		
+		//On initialise les variables qui vont servir pour executer les programmes recus 
+		Environment environment=new Environment();
+		SParser<SNode> parser=new SParser<>();
+		List <SNode> compiled=null;
+		new Exercice4_2_0();
+		
 		Socket socket = serv.accept();
 		BufferedReader br = new BufferedReader(new InputStreamReader( socket.getInputStream() ));
-		System.out.println("Serveur lancé!!");
-		/*
-		space.addElement(robi);
-		space.open();
-		*/
+		
 		String adrr=null;
 		String res=null;
-		while(adrr==null)adrr=br.readLine();
-		while(res==null)res=br.readLine();
+		while(adrr==null)adrr=br.readLine();//On recupere l'adresse envoyé par le client
+		while(res==null)res=br.readLine();//On recupere le message envoyé par le client
+		
+		//On convertir ces String en Message pour recuperer leur valeur
 		Message ipRecu=new Message();
 		ipRecu=ipRecu.fromJson(adrr);
 		Message Rec=new Message();
 		Rec=Rec.fromJson(res);
-		commandeInter.script=Rec.getMess();
+		
+		try {
+			compiled=parser.parse(Rec.getMess());//On converti le String en List de SNode
+		}catch(IOException e) {
+			e.printStackTrace();
+		}	
+		
+		Iterator <SNode> itor=compiled.iterator();//On initialise l'iterateur
 		Boolean variable=true;
-		while(variable) {
-			indic++;
-			commandeInter.runScript();
+		while(variable){
+			
+			while(itor.hasNext()) {
+				new Interpreter().compute(environment, itor.next());//On execute le programme demandé
+			}
+			
 			socket.close();
-			envRecu(ipRecu.getMess(),commandeInter.script);
+			envRecu(ipRecu.getMess(),Rec.getMess());
 			socket= serv.accept();
-			//cliSock=new Socket("localhost",8000);
 			br = new BufferedReader(new InputStreamReader( socket.getInputStream() ));
-			//adrr=null;
-			//res=null;
-			System.out.println("3");
+			
 		    adrr=null;
 		 	res=null;
-			while(adrr==null)adrr=br.readLine();
-			while(res==null)res=br.readLine();
+			while(adrr==null)adrr=br.readLine();//On attend l'adresse ip du client
+			while(res==null)res=br.readLine();  //On attend le message du client
 			ipRecu=new Message();
 			ipRecu=ipRecu.fromJson(adrr);
-			//envRecu(ipRecu.getMess(),script);			
-			
 			Rec=Rec.fromJson(res);
-			commandeInter.script="";
-			commandeInter.script=Rec.getMess();
-			System.out.println("5");
-		}
-		
+			try {
+				compiled=parser.parse(Rec.getMess());//On converti le String en List de SNode
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+			itor=compiled.iterator();//On reinitialise l'iterateur
+			
+	}
 		socket.close();
-		
 		System.out.println("Le programme est fini");
 	}
 	

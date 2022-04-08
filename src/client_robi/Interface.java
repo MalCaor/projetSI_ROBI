@@ -19,25 +19,27 @@ public class Interface extends Application{
         primaryStage.setTitle("Projet L3");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        
         contro=loader.getController();
+        
         contro.b1.setOnAction((ActionEvent event) -> {
-        	s=contro.getTextFieldVal();
-            
-            //System.out.println(">"+s+"<");
+        	s=contro.getTextFieldVal();//On met dans s la valeur du textArea1 
         });
         
         
  
     }
     
-    public void setVal(String s) {
-    	contro.setTAval(s);
+    public void setVal(String strEntree) {//cette méthode permet de mettre dans le second textArea du modèle la valeur de strEntree
+    	contro.setTAval(strEntree);
+    }
+    public void finishInter() {//cette methode ferme l'interface graphique
+    	Platform.exit();
     }
     
-	public static void main(String[] args) throws InterruptedException {
+    
+	public void main(String[] args) throws InterruptedException {
 		launch(args);
-		//System.out.println(">"+s+"<");
-		//Thread.sleep(10000);
 	}
 
 

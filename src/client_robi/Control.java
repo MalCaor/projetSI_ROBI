@@ -27,11 +27,11 @@ public class Control {
     	
     	System.out.println("textArea1 = "+textArea1.getText());
     }
-    public String getTextFieldVal() {
+    public String getTextFieldVal() {//cette méthode permet de récuperer la valeur du 1er textArea
     	return textArea1.getText();
     }
     
-    public void setTAval(String s) {
+    public void setTAval(String s) {//cette méthode permet de mettre dans le second textArea du modèle la valeur de "s"
     	textArea2.setText(s);
     }
     
